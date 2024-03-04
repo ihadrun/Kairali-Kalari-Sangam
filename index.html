@@ -1,9 +1,9 @@
-<index html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Kairali Kalari Sangam Konnot</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,12 +13,36 @@
         }
         header {
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         header img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 33vh; /* Crop the image to 1/3 of its height */
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+        }
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        nav {
+            background-color: #333;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+            font-size: 1.2em;
         }
         section {
             max-width: 800px;
@@ -28,7 +52,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h2, h3 {
             color: #333;
             text-align: center;
         }
@@ -36,40 +60,135 @@
             line-height: 1.6;
             color: #555;
         }
-        img {
-            max-width: 100%;
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .image-container img {
+            width: 48%;
+            height: 150px; /* Set the desired height */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
             height: auto;
             border-radius: 8px;
+        }
+        .map-container {
+            text-align: center;
+        }
+        .map-iframe {
+            width: 100%;
+            height: 300px; /* Set the desired height */
+            border: 1px solid #ccc;
+            border-radius: 8px;
             margin-top: 1em;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-container {
+            text-align: center;
+        }
+        .contact-container i {
+            font-size: 2em;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://lh3.googleusercontent.com/p/AF1QipM19OWoVpx0C_P0JGUlRLpXq1da6kBFW7Sra_4C=s680-w680-h510" alt="Martial Arts Class">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipM19OWoVpx0C_P0JGUlRLpXq1da6kBFW7Sra_4C=s680-w680-h510" alt="Martial Arts Class Banner">
         <h1>Kairali Kalari Sangam Konnot</h1>
     </header>
-    <section>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#schedule">Class Schedule</a>
+        <a href="#location">Location</a>
+        <a href="#photos">Photos</a>
+        <a href="#contact">Contact</a>
+        <a href="#classes">Classes</a>
+    </nav>
+    <section id="about">
         <h2>About the Class</h2>
         <p>Welcome to our martial arts class! We offer a dynamic and inclusive environment for individuals of all skill levels. Whether you're a beginner or an experienced practitioner, our classes provide a comprehensive approach to martial arts.</p>
-        
-        <h2>Class Schedule</h2>
+    </section>
+    <section id="schedule">
+        <h3>Class Schedule</h3>
         <p>Our classes are held on:</p>
         <ul>
             <li>Monday: 6:00 PM - 8:00 PM</li>
             <li>Wednesday: 6:00 PM - 8:00 PM</li>
             <li>Friday: 7:00 PM - 9:00 PM</li>
         </ul>
-
-        <h2>Location</h2>
-        <p>Join us at the Address: konnot, Thayyil house, po, Kozhikode, Kuruvattoor, Kerala 673571</p>
-
-        <h2>Photos</h2>
-        <img src="https://lh3.googleusercontent.com/p/AF1QipPxCqkPtt8F6UCFrFuXhQyO4VfqWsYooZb5Fpbn=s680-w680-h510" alt="Martial Arts Class Photo 1">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipNFrtE28BHVtVSwABEPm9RAab-XwbQmCJPrjl9r=s680-w680-h510" alt="Martial Arts Class Photo 2">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipPZizGjd7xUz2Lo6MvDP74quxd1G2SUx2J56YCP=s680-w680-h510" alt="Martial Arts Class Photo 3">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipM95u6tvPKLt4ilhyYKBExZT5GGMr7HTMeYZ8MP=s680-w680-h510" alt="Martial Arts Class Photo 4">
     </section>
+    <section id="location">
+        <h3>Location</h3>
+        <p>Join us at the Address: konnot, Thayyil house, po, Kozhikode, Kuruvattoor, Kerala 673571</p>
+        <!-- Google Map Link for Directions -->
+        <p><a href="https://maps.app.goo.gl/48QswqkTDt4JitTt9" target="_blank">Get Directions</a></p>
+
+        <!-- Google Map Embedded Screen -->
+        <div class="map-container">
+            <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.263158753048!2d75.92731561480038!3d11.275111691797832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a6247b675cb%3A0xcce7c72b3df21535!2sKairali%20Kalari%20Sangam%20Konnot!5e0!3m2!1sen!2sin!4v1645843368685!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <section id="photos">
+        <h2>Photos</h2>
+        <div class="image-container">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPxCqkPtt8F6UCFrFuXhQyO4VfqWsYooZb5Fpbn=s680-w680-h510" alt="Martial Arts Class Photo 1" onclick="openModal(this.src)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNFrtE28BHVtVSwABEPm9RAab-XwbQmCJPrjl9r=s680-w680-h510" alt="Martial Arts Class Photo 2" onclick="openModal(this.src)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPZizGjd7xUz2Lo6MvDP74quxd1G2SUx2J56YCP=s680-w680-h510" alt="Martial Arts Class Photo 3" onclick="openModal(this.src)">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipM95u6tvPKLt4ilhyYKBExZT5GGMr7HTMeYZ8MP=s680-w680-h510" alt="Martial Arts Class Photo 4" onclick="openModal(this.src)">
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal" onclick="closeModal()">
+            <span class="modal-content">
+                <img id="modalImage">
+            </span>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <i class="fa fa-phone"></i>
+            <p>Phone: 09947050754</p>
+        </div>
+    </section>
+    <section id="classes">
+        <h2>Classes</h2>
+        <p>Our martial arts classes provide training in various disciplines, catering to different skill levels. Join us to experience a holistic approach to martial arts and enhance your physical and mental well-being.</p>
+    </section>
+    <script>
+        function openModal(src) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modalImage").src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
